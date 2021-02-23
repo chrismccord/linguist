@@ -1,4 +1,10 @@
 defmodule Linguist.Compiler do
+  @moduledoc """
+  Module housing the compiler functionality
+
+  See `compile/1` for more information.
+  """
+
   alias Linguist.Cldr.Number.Cardinal
   alias Linguist.NoTranslationError
 
@@ -8,9 +14,9 @@ defmodule Linguist.Compiler do
   Examples
 
   iex> Linguist.Compiler.compile(en: [
-    hello: "Hello %{name}",
-    alert: "Alert!"
-  ])
+  ...>  hello: "Hello %{name}",
+  ...>  alert: "Alert!"
+  ...> ])
 
   quote do
     def t(locale, path, binding \\ [])
@@ -76,7 +82,7 @@ defmodule Linguist.Compiler do
           do_t(locale, path, bindings)
         end
       end
-      
+
       unquote(translations)
 
       def do_t(_locale, _path, _bindings), do: {:error, :no_translation}

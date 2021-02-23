@@ -52,7 +52,7 @@ defmodule Linguist.Mixfile do
       {:yaml_elixir, "~> 2.0"},
 
       {:ex_doc, "~> 0.21.3", only: [:dev, :test], runtime: false},
-      {:credo, "~> 0.9.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
       {:sobelow, "~> 0.10", only: :dev, runtime: false}
     ]
   end

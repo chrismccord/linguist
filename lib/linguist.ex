@@ -1,4 +1,6 @@
 defmodule Linguist do
+  @moduledoc false
+
   defmodule NoTranslationError do
     defexception [:message]
 
